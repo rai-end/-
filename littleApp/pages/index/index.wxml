@@ -1,0 +1,11 @@
+<!-- pages/index/index.wxml -->
+<view class="index-container">
+  <!-- 标题 -->
+  <view class="title">计划小程序</view>
+  
+  <!-- 按钮区域 -->
+  <view class="btn-group">
+    <button bindtap="goToRegister" class="btn register-btn">注册账号</button>
+    <button bindtap="goToLogin" class="btn login-btn">登录账号</button>
+  </view>
+</view>

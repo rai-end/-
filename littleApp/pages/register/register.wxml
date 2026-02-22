@@ -1,0 +1,38 @@
+<!-- pages/register/register.wxml -->
+<view class="register-container">
+  <view class="page-title">账号注册</view>
+  
+  <!-- 表单 -->
+  <view class="form">
+    <view class="input-item">
+      <input 
+        placeholder="请输入用户名" 
+        bindinput="onUsernameInput"
+        value="{{username}}"
+        class="input"
+      />
+    </view>
+    
+    <view class="input-item">
+      <input 
+        placeholder="请输入密码" 
+        password
+        bindinput="onPasswordInput"
+        value="{{password}}"
+        class="input"
+      />
+    </view>
+    
+    <view class="input-item">
+      <input 
+        placeholder="请确认密码" 
+        password
+        bindinput="onConfirmPwdInput"
+        value="{{confirmPwd}}"
+        class="input"
+      />
+    </view>
+    
+    <button bindtap="doRegister" class="submit-btn">完成注册</button>
+  </view>
+</view>

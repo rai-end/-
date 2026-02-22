@@ -1,0 +1,15 @@
+<view class="self-container">
+  <!-- 用户信息展示 -->
+  <view class="user-info">
+    <image class="avatar" src="/static/images/avatar.png" mode="aspectFill"></image>
+    <text class="username">{{userInfo.username || '未登录'}}</text>
+  </view>
+
+  <!-- 功能按钮 -->
+  <view class="func-list">
+    <view class="func-item" bindtap="logout">
+      <text class="func-text">退出登录</text>
+      <icon type="arrowright" size="20"></icon>
+    </view>
+  </view>
+</view>

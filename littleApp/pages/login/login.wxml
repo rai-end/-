@@ -1,0 +1,28 @@
+<!-- pages/login/login.wxml -->
+<view class="login-container">
+  <view class="page-title">账号登录</view>
+  
+  <!-- 表单 -->
+  <view class="form">
+    <view class="input-item">
+      <input 
+        placeholder="请输入用户名" 
+        bindinput="onUsernameInput"
+        value="{{username}}"
+        class="input"
+      />
+    </view>
+    
+    <view class="input-item">
+      <input 
+        placeholder="请输入密码" 
+        password
+        bindinput="onPasswordInput"
+        value="{{password}}"
+        class="input"
+      />
+    </view>
+    
+    <button bindtap="doLogin" class="submit-btn">立即登录</button>
+  </view>
+</view>

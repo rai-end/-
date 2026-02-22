@@ -1,0 +1,83 @@
+<!-- pages/main/main.wxml -->
+<view class="root-container">
+  <!-- 标题区域 -->
+  <view class="title-area">
+    <text class="title-text">请进行计划</text>
+  </view>
+
+  <!-- 日期选择器 -->
+  <picker 
+    mode="date"
+    start="2026-01-01"
+    end="2030-12-31"
+    value="{{selectedDate}}"
+    bindchange="onDateChange"
+    class="date-picker"
+  >
+    <view class="picker-text">
+      {{selectedDate ? selectedDate : '点击选择日期'}}
+    </view>
+  </picker>
+
+  <!-- 长期计划模块 -->
+  <view class="plan-module">
+    <view class="module-title">长期计划</view>
+    <input 
+      placeholder="输入你的长期计划"
+      value="{{longTermPlan.content}}"
+      bindinput="onLongTermInput"
+      class="plan-input"
+    />
+    <view class="plan-button-group">
+      <button bindtap="saveLongTermPlan" class="plan-btn save-btn">保存长期计划</button>
+      <button bindtap="deleteLongTermPlan" class="plan-btn delete-btn">删除</button>
+    </view>
+    <view class="plan-show" wx:if="{{longTermPlan.content}}">
+      <text>{{longTermPlan.content}}</text>
+    </view>
+  </view>
+
+  <!-- 备忘计划模块 -->
+  <view class="plan-module">
+    <view class="module-title">当日备忘计划</view>
+    <input 
+      placeholder="输入你的当日计划"
+      value="{{memoPlan.content}}"
+      bindinput="onMemoInput"
+      class="plan-input"
+    />
+    <view class="plan-button-group">
+      <button bindtap="saveMemoPlan" class="plan-btn save-btn">保存当日计划</button>
+      <button bindtap="deleteMemoPlan" class="plan-btn delete-btn">删除</button>
+    </view>
+    <view class="plan-show" wx:if="{{memoPlan.content}}">
+      <text>{{memoPlan.content}}</text>
+    </view>
+  </view>
+
+  <!-- 紧急计划模块 -->
+  <view class="plan-module">
+    <view class="module-title">紧急计划</view>
+    <input 
+      placeholder="输入紧急计划内容" 
+      value="{{urgentPlan.content}}"
+      bindinput="onUrgentInput"
+      class="plan-input"
+    />
+    <picker 
+      mode="time" 
+      value="{{urgentPlan.time}}" 
+      bindchange="onUrgentTimeChange"
+      class="time-picker"
+    >
+      <view class="time-picker-text">
+        {{urgentPlan.time ? '提醒时间：' + urgentPlan.time : '选择提醒时间'}}
+      </view>
+    </picker>
+    <button bindtap="saveUrgentPlan" class="plan-btn urgent-save-btn">保存紧急计划并开启提醒</button>
+    <!-- 已保存的紧急计划展示 -->
+    <view wx:if="{{urgentPlan.content && urgentPlan.time}}" class="urgent-plan-show">
+      <text class="show-text">已保存：{{urgentPlan.content}}（{{selectedDate}} {{urgentPlan.time}} 提醒）</text>
+    </view>
+  </view>
+</view>

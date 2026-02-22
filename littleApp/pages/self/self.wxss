@@ -1,0 +1,45 @@
+.self-container {
+  padding: 40rpx 30rpx;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  padding: 40rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  margin-bottom: 30rpx;
+}
+
+.avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+  margin-right: 30rpx;
+}
+
+.username {
+  font-size: 36rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+.func-list {
+  background-color: #fff;
+  border-radius: 20rpx;
+}
+
+.func-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.func-text {
+  font-size: 32rpx;
+  color: #333;
+}

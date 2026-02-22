@@ -1,0 +1,24 @@
+# 服务器配置
+server:
+  port: 8080  # 后端端口（小程序调用时用这个端口）
+  servlet:
+    context-path: /  # 接口前缀（所有接口都以/api开头）
+
+# 数据库配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/plan_miniapp?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
+    username: root  # 你的MySQL用户名（默认root）
+    password: root  # 你的MySQL密码（修改为自己的）
+  # 参数校验配置
+  validation:
+    enable: true
+
+# MyBatis配置
+mybatis:
+  mapper-locations: classpath:mapper/*.xml  # Mapper文件路径
+  type-aliases-package: com.example.planminiapp.entity  # 实体类包路径
+  configuration:
+    map-underscore-to-camel-case: true  # 下划线转驼峰（数据库字段plan_date → 实体类planDate）
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl  # 打印SQL日志（方便调试）

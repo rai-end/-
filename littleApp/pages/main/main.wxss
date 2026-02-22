@@ -1,0 +1,220 @@
+/* 全局样式重置 */
+page {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20rpx;
+}
+
+/* 根容器 */
+.root-container {
+  max-width: 750rpx;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30rpx;
+}
+
+/* 标题区域 */
+.title-area {
+  text-align: center;
+  padding: 30rpx 0;
+}
+
+.title-text {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.2);
+  letter-spacing: 4rpx;
+  /* 文字渐变 */
+  background: linear-gradient(90deg, #ffd700, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 日期选择器 */
+.date-picker {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10rpx);
+  border-radius: 16rpx;
+  padding: 24rpx;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.date-picker:active {
+  transform: scale(0.98);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.picker-text {
+  font-size: 32rpx;
+  color: #fff;
+  text-align: center;
+}
+
+/* 计划模块通用样式 */
+.plan-module {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12rpx);
+  border-radius: 20rpx;
+  padding: 30rpx;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8rpx 32rpx rgba(31, 38, 135, 0.15);
+  transition: all 0.4s ease;
+}
+
+.plan-module:hover {
+  transform: translateY(-4rpx);
+  box-shadow: 0 12rpx 40rpx rgba(31, 38, 135, 0.2);
+}
+
+/* 模块标题 */
+.module-title {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 20rpx;
+  /* 标题下划线 */
+  position: relative;
+  padding-bottom: 12rpx;
+}
+
+.module-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 80rpx;
+  height: 4rpx;
+  background: linear-gradient(90deg, #ff6b6b, #feca57);
+  border-radius: 2rpx;
+}
+
+/* 输入框样式 */
+.plan-input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12rpx;
+  padding: 20rpx;
+  font-size: 28rpx;
+  color: #fff;
+  margin-bottom: 20rpx;
+  box-sizing: border-box;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.plan-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.plan-input:focus {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #ffd700;
+  box-shadow: 0 0 16rpx rgba(255, 215, 0, 0.2);
+}
+
+/* 按钮组 */
+.plan-button-group {
+  display: flex;
+  gap: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+/* 通用按钮样式 */
+.plan-btn {
+  flex: 1;
+  padding: 20rpx 0;
+  border-radius: 12rpx;
+  font-size: 28rpx;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* 保存按钮 */
+.save-btn {
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  color: #fff;
+}
+
+.save-btn:active {
+  transform: scale(0.96);
+  background: linear-gradient(90deg, #3fa0e0, #00e1ee);
+}
+
+/* 删除按钮 */
+.delete-btn {
+  background: linear-gradient(90deg, #ff6b6b, #ee5a52);
+  color: #fff;
+}
+
+.delete-btn:active {
+  transform: scale(0.96);
+  background: linear-gradient(90deg, #e55a5a, #d44941);
+}
+
+/* 紧急计划保存按钮 */
+.urgent-save-btn {
+  width: 100%;
+  background: linear-gradient(90deg, #feca57, #ff9ff3);
+  color: #fff;
+  margin-bottom: 20rpx;
+}
+
+.urgent-save-btn:active {
+  transform: scale(0.98);
+  background: linear-gradient(90deg, #fbb847, #f88fe8);
+}
+
+/* 计划展示区域 */
+.plan-show {
+  padding: 20rpx;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12rpx;
+  border-left: 4rpx solid #4facfe;
+}
+
+.plan-show text {
+  font-size: 28rpx;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* 时间选择器 */
+.time-picker {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12rpx;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.time-picker:active {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.time-picker-text {
+  font-size: 28rpx;
+  color: #fff;
+}
+
+/* 紧急计划展示 */
+.urgent-plan-show {
+  padding: 20rpx;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12rpx;
+  border-left: 4rpx solid #feca57;
+}
+
+.show-text {
+  font-size: 28rpx;
+  color: #fff;
+  line-height: 1.6;
+}

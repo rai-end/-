@@ -1,0 +1,180 @@
+/* 全局容器：极简背景+居中布局 */
+.focus-container {
+  padding: 60rpx 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* 时间设置区域：留白+轻量级边框 */
+.time-set {
+  width: 100%;
+  margin-bottom: 80rpx;
+  text-align: center;
+}
+
+.time-set .title {
+  font-size: 36rpx;
+  color: #212529;
+  margin-bottom: 40rpx;
+  display: block;
+  font-weight: 500;
+  letter-spacing: 1rpx;
+}
+
+/* 预设时间按钮组：完全统一样式，无选中区分 */
+.time-btns {
+  display: flex;
+  justify-content: center;
+  gap: 24rpx;
+  margin-bottom: 40rpx;
+}
+
+.time-btn {
+  width: 140rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 32rpx;
+  background-color: #ffffff;
+  border: none; /* 移除所有边框 */
+  border-radius: 44rpx;
+  color: #495057;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  font-weight: normal; /* 统一字体粗细 */
+}
+
+/* 彻底删除active选中样式（关键） */
+/* 移除 .time-btn.active 所有相关样式 */
+
+/* hover效果保留（仅交互反馈，无选中区分） */
+.time-btn:hover {
+  background-color: #f1f3f5;
+  transform: translateY(-2rpx);
+}
+
+/* 自定义时间输入框：极简风格 */
+.custom-time {
+  display: flex;
+  align-items: center;
+  gap: 24rpx;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.time-input {
+  flex: 1;
+  height: 96rpx;
+  line-height: 96rpx;
+  padding: 0 32rpx;
+  border: none;
+  border-radius: 48rpx;
+  font-size: 32rpx;
+  background-color: #ffffff;
+  color: #212529;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+}
+
+.time-input::placeholder {
+  color: #adb5bd;
+  font-size: 28rpx;
+}
+
+.confirm-btn {
+  width: 140rpx;
+  height: 96rpx;
+  line-height: 96rpx;
+  font-size: 30rpx;
+  background: linear-gradient(90deg, #4361ee 0%, #3a0ca3 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 48rpx;
+  box-shadow: 0 4rpx 12rpx rgba(67, 97, 238, 0.2);
+  transition: all 0.2s ease;
+}
+
+.confirm-btn:hover {
+  transform: translateY(-2rpx);
+  box-shadow: 0 6rpx 16rpx rgba(67, 97, 238, 0.3);
+}
+
+/* 倒计时显示区域：视觉焦点 */
+.countdown {
+  margin-bottom: 100rpx;
+  padding: 80rpx 120rpx;
+  background-color: #ffffff;
+  border-radius: 24rpx;
+  box-shadow: 0 8rpx 24rpx rgba(0, 0, 0, 0.08);
+}
+
+.time-text {
+  font-size: 120rpx;
+  font-weight: 700;
+  color: #212529;
+  letter-spacing: 8rpx;
+  font-family: "SF Pro Display", "PingFang SC", "Helvetica Neue", sans-serif;
+}
+
+/* 控制按钮组：分组+渐变 */
+.control-btns {
+  display: flex;
+  justify-content: center;
+  gap: 32rpx;
+  width: 100%;
+  max-width: 800rpx;
+}
+
+.control-btn {
+  flex: 1;
+  height: 96rpx;
+  line-height: 96rpx;
+  font-size: 32rpx;
+  border: none;
+  border-radius: 48rpx;
+  color: #ffffff;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+}
+
+.control-btn:hover {
+  transform: translateY(-2rpx);
+  box-shadow: 0 6rpx 16rpx rgba(0, 0, 0, 0.12);
+}
+
+/* 按钮颜色区分：语义化配色 */
+.start {
+  background: linear-gradient(90deg, #38b000 0%, #007f5f 100%);
+}
+
+.pause {
+  background: linear-gradient(90deg, #ff9f1c 0%, #e76f51 100%);
+}
+
+.resume {
+  background: linear-gradient(90deg, #168aad 0%, #05668d 100%);
+}
+
+.reset {
+  background: linear-gradient(90deg, #e63946 0%, #d62828 100%);
+}
+
+/* 适配小屏设备 */
+@media (max-width: 750rpx) {
+  .time-text {
+    font-size: 96rpx;
+  }
+  
+  .control-btns {
+    gap: 20rpx;
+  }
+  
+  .control-btn {
+    font-size: 28rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+  }
+}

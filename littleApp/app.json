@@ -1,0 +1,43 @@
+{
+  "usingComponents": {
+  },
+  "entryPagePath": "pages/index/index",
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/main/main",
+    "pages/self/self",
+    "pages/focus/focus"
+  ],
+  "window": {
+    "navigationBarTitleText": "功能演示",
+    "navigationBarBackgroundColor": "#0000FF",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#00FFFF",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "list": [
+      {
+      "pagePath": "pages/main/main",
+      "text": "首页",
+      "iconPath": "/images/home.png",
+      "selectedIconPath": "/images/home_select.png"
+    },
+    {
+      "pagePath": "pages/focus/focus",
+      "text": "专注",
+      "iconPath": "/images/my.png",
+      "selectedIconPath": "/images/my_select.png"
+    },
+    {
+      "pagePath": "pages/self/self",
+      "text": "个人",
+      "iconPath": "/images/my.png",
+      "selectedIconPath": "/images/my_select.png"
+    }
+  ]
+  },
+  "style": "v2"
+}
